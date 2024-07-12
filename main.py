@@ -40,11 +40,13 @@ while game_is_on:
         ball.center()
         scoreboard.l_score+=1
         scoreboard.update_scoreboard()
+        ball.change_direction()
 
     # Detect when left paddle misses
     if ball.xcor() < -380:
         ball.center()
         scoreboard.r_score+=1
         scoreboard.update_scoreboard()
+        ball.change_direction()
 
 screen.exitonclick()
